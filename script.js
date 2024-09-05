@@ -10,13 +10,9 @@ for (let i = 0; i < 9; i++) {
     sudoku[i][j]=[];
     for(let k = 0; k < 10; k++){
         sudoku[i][j][k]=k;
-        console.log(k);
     }
   }
 }
 
-sudoku[0][0].splice(0,1);
-
-//fill the array with a random completed sudoku
-
-console.log(sudoku);
+var random = parseInt(Math.random()*10);
+console.log("Random: " + random);
