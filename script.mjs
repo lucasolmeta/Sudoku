@@ -1,4 +1,4 @@
-import { checkValidity } from './checkValidity.js';
+import { checkValidity } from './checkValidity.mjs';
 
 //init sudoku array
 
@@ -6,10 +6,10 @@ const sudoku = [];
 
 // fill array with empty sub-arrays
 
-for (let row = 0; i < 9; i++) {
-  sudoku[i]=[];
-  for (let col = 0; j < 9; j++) {
-    sudoku[i][j]=k;
+for (let row = 0; row < 9; row++) {
+  sudoku[row]=[];
+  for (let col = 0; col < 9; col++) {
+    sudoku[row][col]=[];
   }
 }
 
@@ -26,9 +26,9 @@ for(let i = 1; i < 10; i++){
 
         let numPlaced = false;
 
-        while(numPlaced = false){
+        while(numPlaced == false){
             var randomCol = parseInt(Math.random()*10);
-            if(checkValidity(i, randomCol, sudoku)){
+            if(checkValidity(i, row, randomCol, sudoku)){
                sudoku[row][randomCol]=i;
                numPlaced = true;
             }
@@ -36,12 +36,15 @@ for(let i = 1; i < 10; i++){
     }
 }
 
-// print random sudoku
+// print sudoku
 
 for (let row = 0; row < 9; row ++){
     for (let col = 0; col < 9; col ++){
-        console.log("[ " + sudoku[row][col] + " ]");
+        process.stdout.write("[ " + sudoku[row][col] + " ]");
     }
 
-    console.log("/n");
+    console.log("\n");
 }
+
+
+// THEYRE WRITING OBVER EACH OTHER
