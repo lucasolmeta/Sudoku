@@ -30,6 +30,7 @@ for(let i = 1; i < 10; i++){
             var randomCol = parseInt(Math.random()*10);
             if(checkValidity(i, row, randomCol, sudoku)){
                sudoku[row][randomCol]=i;
+               console.log("Number Placed");
                numPlaced = true;
             }
         }
