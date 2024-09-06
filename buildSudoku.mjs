@@ -1,18 +1,24 @@
+export { initArray }
 export { buildSudoku }
+export { buildPuzzle }
 export { printSudoku }
+
+function initArray (array){
+    // makes sudoku size 9x9
+
+    for (let row = 0; row < 9; row++) {
+        array[row]=[];
+        for (let col = 0; col < 9; col++) {
+            array[row][col]=0;
+        }
+    }
+
+    return array;
+}
 
 function buildSudoku (sudoku){
 
     let ticks = 0;
-
-    // makes sudoku size 9x9
-
-    for (let row = 0; row < 9; row++) {
-        sudoku[row]=[];
-        for (let col = 0; col < 9; col++) {
-            sudoku[row][col]=0;
-        }
-    }
 
     // i loops through every row
 
@@ -28,7 +34,7 @@ function buildSudoku (sudoku){
 
             let numPlaced = false;
         
-            while(numPlaced == false){
+            while(!numPlaced){
             
                 //track number of number number generations to make sure all is working well
 
@@ -51,6 +57,21 @@ function buildSudoku (sudoku){
                    sudoku[row][col]=num;
                    numPlaced = true;
                 }
+            }
+        }
+    }
+}
+
+function buildPuzzle(sudoku){
+    for(let i = 0; i < 40; i++){
+        let numRemoved = false;
+
+        while(!numRemoved){
+            var row = Math.floor(Math.random() * 9);
+            var col = Math.floor(Math.random() * 9);
+
+            if(sudoku[row][col]!=0){
+                sudoku[row][col]=0;           
             }
         }
     }
