@@ -1,17 +1,19 @@
 export { checkValidity };
 
-function checkValidity(num, row, randomCol, sudoku){
+function checkValidity(num, row, col, sudoku){
     
-    //check if cell is already taken by another number
+    //check if the given number is already in the given column
 
-    if(sudoku[row][randomCol]!=[]){
-        return false;
+    for (let r = 0; r < 9; r++){
+        if(sudoku[r][col] == num){
+            return false;
+        }
     }
+    
+    // check if the given number is already in the given row
 
-    //check if the given number is already in a given column
-
-    for (let row = 0; row < 9; row++){
-        if(sudoku[row][randomCol]==num){
+    for (let c = 0; c < col; c++){
+        if(sudoku[row][c] == num){
             return false;
         }
     }

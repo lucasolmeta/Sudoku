@@ -1,51 +1,66 @@
 import { checkValidity } from './checkValidity.mjs';
 
+let ticks = 0;
+
+let sudoku = [];
+
 //init sudoku array
 
-const sudoku = [];
-
-// fill array with empty sub-arrays
+// makes sudoku size 9x9
 
 for (let row = 0; row < 9; row++) {
   sudoku[row]=[];
   for (let col = 0; col < 9; col++) {
-    sudoku[row][col]=[];
+    sudoku[row][col]=0;
   }
 }
 
+// i loops through every row
 
-// i loops through numbers 1-9
+for(let row = 0; row < 9; row++){
 
-for(let i = 1; i < 10; i++){
+    let iterations = 0;
 
-    // loops through every row to put each number i into each row once
+    // loops through every column
 
-    for(let row = 0; row < 9; row++){
+    for(let col = 0; col < 9; col++){
 
-        //keep randomizing columns until number i can be placed somewhere in the row
+        //keep randomizing numbers until the current spot can be filled
 
         let numPlaced = false;
-
+        
         while(numPlaced == false){
-            var randomCol = parseInt(Math.random()*10);
-            if(checkValidity(i, row, randomCol, sudoku)){
-               sudoku[row][randomCol]=i;
-               console.log("Number Placed");
+            
+            //track number of number number generations to make sure all is working well
+
+            var num = Math.floor(Math.random() * 9)+1
+            iterations++;
+            ticks++;
+            
+            if (iterations>80){
+                for(col = 8; col >-1; col--){
+                    sudoku[row][col]=0;
+                }
+                iterations = 0;
+            }else if(checkValidity(num, row, col, sudoku)){
+               sudoku[row][col]=num;
                numPlaced = true;
             }
         }
     }
 }
 
-// print sudoku
+console.log("TICKS = " + ticks);
+printSudoku();
 
-for (let row = 0; row < 9; row ++){
-    for (let col = 0; col < 9; col ++){
-        process.stdout.write("[ " + sudoku[row][col] + " ]");
+function printSudoku(){
+
+    for (let row = 0; row < 9; row ++){
+        process.stdout.write("ROW: " + row + " ");
+        for (let col = 0; col < 9; col ++){
+            process.stdout.write("[ " + sudoku[row][col] + " ]");
+        }
+
+        console.log("\n");
     }
-
-    console.log("\n");
 }
-
-
-// THEYRE WRITING OBVER EACH OTHER
