@@ -17,6 +17,6 @@ for(let r = 0; r < 9; r++){
     }
 }
 
-printSudoku(solution);
-
 buildPuzzle(puzzle);
+
+printSudoku(puzzle);

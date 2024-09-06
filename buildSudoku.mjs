@@ -71,7 +71,8 @@ function buildPuzzle(sudoku){
             var col = Math.floor(Math.random() * 9);
 
             if(sudoku[row][col]!=0){
-                sudoku[row][col]=0;           
+                sudoku[row][col]=0;     
+                numRemoved = true;      
             }
         }
     }
