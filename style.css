@@ -1,5 +1,12 @@
-#grid{
-    display: grid;
-    grid-template-rows: 75px 75px 75px 75px 75px 75px 75px 75px 75px;
-    grid-template-columns: 75px 75px 75px 75px 75px 75px 75px 75px 75px;
+#outerBox{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    width: 675px;
+    height: 675px;
+
+    background-color: gray;
+    border-color: black;
+    border-width: 3px;
 }
