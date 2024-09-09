@@ -35,11 +35,14 @@ function generateSudoku(){
             let thisNum = r*9 + c;
             
             const input = document.getElementById('input' + thisNum);
+            const cell = document.getElementById('cell' + thisNum);
             
             if(puzzle[r][c]==0){
                 input.value="";
+                cell.style.backgroundColor = ('rgb(225,225,225)');
             } else {
                 input.value = puzzle[r][c];
+                cell.style.backgroundColor = 'rgb(190,190,190)';
             }
 
             input.style.color = 'black';
