@@ -5,20 +5,22 @@ export { generateSudoku }
 
 import { initArray } from "./buildSudoku.mjs";
 import { buildSudoku } from "./buildSudoku.mjs";
+import { resetArray } from "./buildSudoku.mjs";
 import { printSudoku } from "./buildSudoku.mjs";
 import { buildPuzzle } from "./buildSudoku.mjs";
 
 let solution = [];
 let puzzle = [];
 
+initArray(solution);
+initArray(puzzle);
+
 function generateSudoku(){
 
-    initArray(solution);
-    initArray(puzzle);
+    resetArray(solution);
+    resetArray(puzzle);
 
     buildSudoku(solution);
-
-    console.log(solution[0][0]);
 
     for(let r = 0; r < 9; r++){
         for (let c = 0; c < 9; c++){
@@ -33,10 +35,14 @@ function generateSudoku(){
             let thisNum = r*9 + c;
             
             const input = document.getElementById('input' + thisNum);
-
-            if(puzzle[r][c]!=0){
+            
+            if(puzzle[r][c]==0){
+                input.value="";
+            } else {
                 input.value = puzzle[r][c];
             }
+
+            input.style.color = 'black';
         }
     }
 }
@@ -48,8 +54,12 @@ function checkSudoku(){
 
             const input = document.getElementById('input' + thisNum);
 
+            puzzle[r][c]=input.value;
+
             if(puzzle[r][c]==solution[r][c]){
                 input.style.color = 'blue';
+            } else if (puzzle[r][c]==''){
+                input.style.color = 'black';
             } else {
                 input.style.color = 'red';
             }

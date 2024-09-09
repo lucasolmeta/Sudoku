@@ -60,7 +60,7 @@
 .numInput{
     margin: 0px;
     padding: 0px;
-    
+
     width: 66px;
     height: 66px;
 
@@ -68,6 +68,7 @@
     text-align: center;
 
     line-height: 66px;
+    font-size: 30px;
 
     background-color: rgba(0,0,0,0);
     border-width: 0px;;

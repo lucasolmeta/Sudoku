@@ -1,12 +1,13 @@
 export { initArray }
+export { resetArray }
 export { buildSudoku }
 export { buildPuzzle }
 export { printSudoku }
 
 function initArray (array){
-    
-    // makes sudoku size 9x9
 
+    // makes sudoku size 9x9
+    
     for (let row = 0; row < 9; row++) {
         array[row]=[];
         for (let col = 0; col < 9; col++) {
@@ -15,6 +16,14 @@ function initArray (array){
     }
 
     return array;
+}
+
+function resetArray (array){
+    for(let r = 0; r < 9; r++){
+        for (let c = 0; c < 9; c++){
+            array[r][c]=0;
+        }
+    }
 }
 
 function buildSudoku (sudoku){
