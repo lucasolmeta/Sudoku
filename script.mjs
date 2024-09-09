@@ -65,4 +65,18 @@ function checkSudoku(){
             }
         }
     }
+
+    let solved = true;
+
+    for(let r = 0; r < 9; r++){
+        for (let c = 0; c < 9; c++){
+            if(puzzle[r][c]!=solution[r][c]){
+                solved = false;
+            }
+        }
+    }
+
+    if(solved){
+        alert("Congratulations, You Solved The Sudoku!");
+    }
 }

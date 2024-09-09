@@ -71,7 +71,8 @@
     font-size: 30px;
 
     background-color: rgba(0,0,0,0);
-    border-width: 0px;;
+    border-width: 0px;
+    transform: translate(-3px,-3px);
 }
 
 #buttonDiv{
