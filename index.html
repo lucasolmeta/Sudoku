@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sudoku</title>
     <link href="style.css" rel="stylesheet">
-    <script src="scripts.mjs"></script>
+    <script type="module" src="scripts.mjs"></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -19,15 +19,7 @@
                 for (let j = 0; j < 9; j++){
                     const cell = document.createElement('div');
                     
-                    let cellNum = 9*i + j;
-
-                    /*if(j<3){
-                        */cellNum = Math.floor(i/3)*18+Math.floor(j/3)*6+i*3+j;/*
-                    } else if(j<6){
-                        cellNum = Math.floor(i/3)*18+i*3+j;
-                    } else {
-                        cellNum = i*3+j+200;
-                    }*/
+                    let cellNum = Math.floor(i/3)*18+Math.floor(j/3)*6+i*3+j;
     
                     cell.className = 'cell';
                     cell.id = 'cell' + cellNum;
@@ -41,6 +33,10 @@
 
 <body>
     <div id="outerBox">
+    </div>
+    <div id="buttonDiv">
+        <button type="button" onClick="generateSudoku()"" id="regenButton">Regenerate Sudoku</button>
+        <button type="button" onClick="checkSudoku()"" id="checkButton">Check Sudoku</button>
     </div>
 </body>
 
