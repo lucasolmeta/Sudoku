@@ -4,6 +4,7 @@ export { buildPuzzle }
 export { printSudoku }
 
 function initArray (array){
+    
     // makes sudoku size 9x9
 
     for (let row = 0; row < 9; row++) {
@@ -113,9 +114,9 @@ function checkValidity(num, row, col, sudoku){
 function printSudoku(sudoku){
 
     for (let row = 0; row < 9; row ++){
-        process.stdout.write("ROW: " + row + " ");
+        console.log("ROW: " + row + " ");
         for (let col = 0; col < 9; col ++){
-            process.stdout.write("[ " + sudoku[row][col] + " ]");
+            console.log("[ " + sudoku[row][col] + " ]");
         }
 
         console.log("\n");

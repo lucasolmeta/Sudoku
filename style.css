@@ -57,6 +57,22 @@
     border: 3px solid gray;
 }
 
+.numInput{
+    margin: 0px;
+    padding: 0px;
+    
+    width: 66px;
+    height: 66px;
+
+    align-items: center;
+    text-align: center;
+
+    line-height: 66px;
+
+    background-color: rgba(0,0,0,0);
+    border-width: 0px;;
+}
+
 #buttonDiv{
     display: flex;
     justify-content: center;
@@ -66,7 +82,7 @@
 #regenButton{
     align-content: center;
 
-    margin: 30px;
+    margin: 31px;
 
     height: 100px;
     width: 250px;
@@ -86,7 +102,7 @@
 #checkButton{
     align-content: center;
 
-    margin: 30px;
+    margin: 31px;
 
     height: 100px;
     width: 250px;
