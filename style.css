@@ -28,7 +28,7 @@
     width: 400px;
     border: 2px, solid, black;
     border-radius: 3px;
-    background-color: gray;
+    background-color: rgb(140,140,140);
     position: absolute;
     top: 350px;
     z-index: 3;
@@ -40,11 +40,17 @@
 
     font-family: 'TimesNewRoman';
     text-align: center;
-    font-size: 30px;
+    font-size: 27px;
     line-height: 50px;
+
+    background-color: rgb(230,230,230);
 
     margin-left: 20px;
     margin-right: 20px;
+}
+
+.menuButton:hover{
+    background-color: rgb(245,245,245);
 }
 
 #outerBox{
