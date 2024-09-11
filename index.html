@@ -42,10 +42,11 @@
 
 <body>
     <div id = "logoBox"><img id = "logo" src="logo.png"></div>
+    <div id = "alert">Are you sure you want to generate a new sudoku? Your current progress will be lost.<div id="menuButtonBox"><button class = "menuButton" onClick="confirmButtonPressed()">Confirm</button></div><div><button  class = "menuButton" onClick="exitButtonPressed()">Exit</button></div></div>
     <div id="outerBox">
     </div>
     <div id="buttonDiv">
-        <button type="button" onClick="generateSudoku()" id="regenButton">Generate Sudoku</button>
+        <button type="button" onClick="regenerateButtonPressed()" id="regenButton">Generate Sudoku</button>
         <button type="button" onClick="checkSudoku()" id="checkButton">Check Sudoku</button>
     </div>
 </body>

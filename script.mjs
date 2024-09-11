@@ -1,5 +1,8 @@
+window.regenerateButtonPressed = regenerateButtonPressed;
 window.generateSudoku = generateSudoku;
 window.checkSudoku = checkSudoku;
+window.confirmButtonPressed = confirmButtonPressed;
+window.exitButtonPressed = exitButtonPressed;
 
 export { generateSudoku }
 
@@ -14,6 +17,21 @@ let puzzle = [];
 
 initArray(solution);
 initArray(puzzle);
+
+let totalSudokusPlayed = 0;
+
+function regenerateButtonPressed(){
+    totalSudokusPlayed++;
+
+    if(totalSudokusPlayed==1){
+        generateSudoku();
+        return;
+    }
+       
+    let alert = document.getElementById("alert");
+
+    alert.style.display = 'flex';
+}
 
 function generateSudoku(){
 
@@ -82,4 +100,18 @@ function checkSudoku(){
     if(solved){
         alert("Congratulations, You Solved The Sudoku!");
     }
+}
+
+function confirmButtonPressed (){
+    generateSudoku();
+
+    let alert = document.getElementById("alert");
+
+    alert.style.display = 'none';
+}
+
+function exitButtonPressed (){
+    let alert = document.getElementById("alert");
+
+    alert.style.display = 'none';
 }

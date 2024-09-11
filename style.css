@@ -8,6 +8,45 @@
     height: auto;
 }
 
+#alert{
+    display: none;
+
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+
+    justify-content: center;
+    justify-items: center;
+    align-content: space-around;
+    flex-wrap: wrap;
+
+    font-family: 'TimesNewRoman';
+    text-align: center;
+    font-size: 30px;
+
+    height: 250px;
+    width: 400px;
+    border: 2px, solid, black;
+    border-radius: 3px;
+    background-color: gray;
+    position: absolute;
+    top: 350px;
+    z-index: 3;
+}
+
+.menuButton{
+    height: 50px;
+    width: 125px;
+
+    font-family: 'TimesNewRoman';
+    text-align: center;
+    font-size: 30px;
+    line-height: 50px;
+
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 #outerBox{
     display: flex;
     flex-direction: row;
