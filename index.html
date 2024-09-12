@@ -1,54 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sudoku Space</title>
-    <link rel="icon" type="image/x-icon" href="favicon.png">
-    <link href="style.css" rel="stylesheet">
-    <script type="module" src="script.mjs"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sudoku Space</title>
+        <link rel="icon" type="image/x-icon" href="favicon.png">
+        <link href="style.css" rel="stylesheet">
+        <script type="module" src="setup.mjs"></script>
+    </head>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const outerBox = document.getElementById('outerBox');
-          
-            for (let i = 0; i < 9; i++) {
-                const innerBox = document.createElement('div');
-                innerBox.className = 'innerBox';
-                innerBox.id = 'innerbox' + i;
-                outerBox.appendChild(innerBox);
-                for (let j = 0; j < 9; j++){
-                    const cell = document.createElement('div');
-                    const numInput = document.createElement('input');
-                    
-                    let cellNum = Math.floor(i/3)*18+Math.floor(j/3)*6+i*3+j;
-    
-                    cell.className = 'cell';
-                    cell.id = 'cell' + cellNum;
-                    
-                    numInput.type = 'text';
-                    numInput.maxLength = 1;
-                    numInput.className = 'numInput';
-                    numInput.id = 'input' + cellNum;
-                    numInput.value = "";
+    <body>
+        <div id = "logoBox"><img id = "logo" src="logo.png"></div>
+        
+        <div id = "alert">Are you sure you want to generate a new sudoku? Your current progress will be lost.
+            <div id="menuButtonBox">
+                <button class = "menuButton" onClick="confirmButtonPressed()">Confirm</button></div><div>
+                <button  class = "menuButton" onClick="cancelButtonPressed()">Cancel</button>
+            </div>
+        </div>
 
-                    innerBox.appendChild(cell);
-                    cell.appendChild(numInput);
-                }
-            }
-        });
-    </script>
-</head>
+        <div id="outerBox"></div>
 
-<body>
-    <div id = "logoBox"><img id = "logo" src="logo.png"></div>
-    <div id = "alert">Are you sure you want to generate a new sudoku? Your current progress will be lost.<div id="menuButtonBox"><button class = "menuButton" onClick="confirmButtonPressed()">Confirm</button></div><div><button  class = "menuButton" onClick="exitButtonPressed()">Exit</button></div></div>
-    <div id="outerBox">
-    </div>
-    <div id="buttonDiv">
-        <button type="button" onClick="generateRequest()" id="regenButton">Generate Sudoku</button>
-        <button type="button" onClick="checkSudoku()" id="checkButton">Check Sudoku</button>
-    </div>
-</body>
-
+        <div id="buttonDiv">
+            <button type="button" onClick="generateRequest()" id="regenButton">Generate Sudoku</button>
+            <button type="button" onClick="checkSudoku()" id="checkButton">Check Sudoku</button>
+        </div>
+    </body>
 </html>

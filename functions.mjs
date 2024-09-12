@@ -1,7 +1,7 @@
 window.checkSudoku = checkSudoku;
 window.generateRequest = generateRequest;
 window.confirmButtonPressed = confirmButtonPressed;
-window.exitButtonPressed = exitButtonPressed;
+window.cancelButtonPressed = cancelButtonPressed;
 
 export { initArray }
 export { buildSudoku }
@@ -194,7 +194,7 @@ function confirmButtonPressed (){
     alert.style.display = 'none';
 }
 
-function exitButtonPressed (){
+function cancelButtonPressed (){
 
     let alert = document.getElementById("alert");
 
