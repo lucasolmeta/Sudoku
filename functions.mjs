@@ -112,6 +112,11 @@ function initPuzzleUI(){
 }
 
 function checkSudoku(){
+
+    if(initGeneration){
+        return;
+    }
+
     for(let r = 0; r < 9; r++){
         for(let c = 0; c < 9; c++){
             let thisNum= r*9+c;
