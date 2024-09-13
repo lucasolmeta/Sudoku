@@ -127,13 +127,10 @@ function checkSudoku(){
 
             if(puzzle[r][c]==solution[r][c]){
                 input.style.color = 'blue';
-                element.style.webkitTextFillColor = 'blue';
             } else if (puzzle[r][c]==''){
                 input.style.color = 'black';
-                element.style.webkitTextFillColor = 'black';
             } else {
                 input.style.color = 'red';
-                element.style.webkitTextFillColor = 'red';
             }
         }
     }
