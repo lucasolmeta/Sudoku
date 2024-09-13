@@ -18,10 +18,7 @@
 
     font-family: 'TimesNewRoman';
     text-align: center;
-    font-size: 30px;
-
-    height: 250px;
-    width: 400px;
+    
     border: 2px, solid, black;
     border-radius: 3px;
     background-color: rgb(140,140,140);
@@ -31,19 +28,11 @@
 }
 
 .menuButton{
-    height: 50px;
-    width: 125px;
-    
     -webkit-text-fill-color: black;
     font-family: 'TimesNewRoman';
     text-align: center;
-    font-size: 27px;
-    line-height: 50px;
 
     background-color: rgb(230,230,230);
-
-    margin-left: 20px;
-    margin-right: 20px;
 }
 
 .menuButton:hover{
@@ -85,7 +74,6 @@
     box-sizing: border-box;
 
     background-color: rgba(0,0,0,0);
-    border-width: 3px;
     border-style: solid;
     border-color: black;
 
@@ -121,7 +109,7 @@
     transform: translate(-1px,-1px);
 }
 
-#buttonDiv{
+#sudokuFunctionButtonDiv{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,12 +118,9 @@
 .sudokuFunctionButtons{
     align-content: center;
 
-    margin: 31px;
-
     color: black;
     -webkit-text-fill-color: black;
     font-family: "fantasy", "copperplate";
-    font-size: 22px;
 
     background-color: rgb(170,170,170);
     border-radius: 3px;

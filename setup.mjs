@@ -22,11 +22,6 @@ for (let i = 0; i < 9; i++) {
     for (let j = 0; j < 9; j++){
         const cell = document.createElement('div');
         const numInput = document.createElement('input');
-
-        const numInputSize = window.innerHeight/12+2;
-        const fontSize = numInputSize*0.7;
-        const innerBoxSize = numInputSize*3+6;
-        const outerBoxSize = innerBoxSize*3;
                     
         let cellNum = Math.floor(i/3)*18+Math.floor(j/3)*6+i*3+j;
     
