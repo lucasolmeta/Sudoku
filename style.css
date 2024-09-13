@@ -33,7 +33,8 @@
 .menuButton{
     height: 50px;
     width: 125px;
-
+    
+    -webkit-text-fill-color: black;
     font-family: 'TimesNewRoman';
     text-align: center;
     font-size: 27px;
@@ -132,6 +133,7 @@
     margin: 31px;
 
     color: black;
+    -webkit-text-fill-color: black;
     font-family: "fantasy", "copperplate";
     font-size: 22px;
 
