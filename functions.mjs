@@ -8,6 +8,7 @@ export { buildSudoku }
 export { buildPuzzle }
 export { initPuzzleUI }
 export { checkSudoku }
+export { resizeScreen }
 
 let initGeneration = true;
 
@@ -139,7 +140,7 @@ function checkSudoku(){
         }
     }
 
-    if(solved){
+    if(solved && !initGeneration){
         alert("Congratulations, you solved the sudoku!");
     }
 }
@@ -200,3 +201,68 @@ function cancelButtonPressed (){
 
     alert.style.display = 'none';
 }
+
+function resizeScreen (){
+    let scalingMultiplier = 1;
+
+    if(window.innerWidth/window.innerHeight < 1){
+        scalingMultiplier = window.innerWidth/window.innerHeight;
+        console.log(scalingMultiplier);
+    }
+    
+
+    const logoHeight = (window.innerHeight/18)*scalingMultiplier;
+    const numInputSize = (window.innerHeight/12.5+2)*scalingMultiplier;
+    const fontSize = numInputSize*0.7;
+    const innerBoxSize = numInputSize*3+6;
+    const outerBoxSize = innerBoxSize*3;
+    const sudokuFunctionButtonsHeight = (window.innerHeight/11)*scalingMultiplier;
+
+    const logo = document.getElementById('logo');
+    const numInputs = document.querySelectorAll('.numInput');
+    const cells = document.querySelectorAll('.cell');
+    const innerBoxes = document.querySelectorAll('.innerBox');
+    const outerBox = document.getElementById('outerBox');
+    const sudokuFunctionButtons = document.querySelectorAll('.sudokuFunctionButtons');
+    
+    if(window.innerHeight<1050){
+        logo.style.height = logoHeight + 'px';
+        logo.style.width = 'auto';
+        logo.style.marginTop = logoHeight/4 + 'px'
+        logo.style.marginBottom = logo.style.marginTop;
+    } else {
+        logo.style.height = '70px';
+        logo.style.width = 'auto';
+        logo.style.marginTop =  '18px'
+        logo.style.marginBottom = '18px';
+    }
+
+    numInputs.forEach(numInput => {
+        numInput.style.height = numInputSize + 'px';
+        numInput.style.width = numInputSize + 'px';
+        numInput.style.lineHeight = numInputSize + 'px';
+        numInput.style.fontSize = fontSize + 'px';
+    });
+
+    cells.forEach(cell => {
+        cell.style.height = numInputSize + 'px';
+        cell.style.width = numInputSize + 'px';
+    });
+    
+    innerBoxes.forEach(innerBox => {
+        innerBox.style.height = innerBoxSize + 'px';
+        innerBox.style.width = innerBoxSize + 'px';
+    });
+
+    outerBox.style.height = outerBoxSize + 'px';
+    outerBox.style.width = outerBoxSize + 'px';
+
+    sudokuFunctionButtons.forEach(sudokuFunctionButton =>{
+        sudokuFunctionButton.style.height = sudokuFunctionButtonsHeight + 'px';
+        sudokuFunctionButton.style.width = sudokuFunctionButtonsHeight*2.5 + 'px';
+        sudokuFunctionButton.style.margin = sudokuFunctionButtonsHeight*0.6 + 'px';
+        sudokuFunctionButton.style.marginTop = sudokuFunctionButtonsHeight*0.3 + 'px';
+        sudokuFunctionButton.style.fontSize = sudokuFunctionButtonsHeight*0.35 + 'px';
+        sudokuFunctionButton.style.borderWidth = sudokuFunctionButtonsHeight/10 + 'px';
+    });
+  }

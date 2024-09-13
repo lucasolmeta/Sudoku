@@ -2,10 +2,6 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    width: 500px;
-    height: auto;
 }
 
 #alert{
@@ -67,9 +63,6 @@
 
     box-sizing: border-box;
     
-    width: 576px;
-    height: 576px;
-    
     background-color: lightgray;
     border-width: 0px;
 
@@ -90,11 +83,10 @@
 
     box-sizing: border-box;
 
-    width: 192px;
-    height: 192px;
-
     background-color: rgba(0,0,0,0);
-    border: 3px solid black;
+    border-width: 3px;
+    border-style: solid;
+    border-color: black;
 
     z-index: 2;
 }
@@ -105,13 +97,8 @@
 
     box-sizing: border-box;
 
-    width: 62px;
-    height: 62px;
-
     align-items: center;
     text-align: center;
-
-    line-height: 62px;
 
     background-color: rgb(225,225,225);
     border: 1px solid gray;
@@ -123,15 +110,10 @@
     margin: 0px;
     padding: 0px;
 
-    width: 62px;
-    height: 62px;
-
     align-items: center;
     text-align: center;
 
-    line-height: 62px;
     font-family: 'Courier New Bold', Courier, monospace;
-    font-size: 40px;
 
     background-color: rgba(0,0,0,0);
     border-width: 0px;
@@ -144,42 +126,18 @@
     align-items: center;
 }
 
-#regenButton{
+.sudokuFunctionButtons{
     align-content: center;
 
     margin: 31px;
-
-    height: 100px;
-    width: 250px;
 
     font-family: "fantasy", "copperplate";
     font-size: 22px;
 
     background-color: rgb(170,170,170);
-    border-width: 5px;
     border-radius: 3px;
 }
 
-#regenButton:hover{
-    background-color: lightgray;
-}
-
-#checkButton{
-    align-content: center;
-
-    margin: 31px;
-
-    height: 100px;
-    width: 250px;
-
-    font-family: "fantasy", "copperplate";
-    font-size: 22px;
-
-    background-color: rgb(170,170,170);
-    border-width: 5px;
-    border-radius: 3px;
-}
-
-#checkButton:hover{
+.sudokuFunctionButtons:hover{
     background-color: lightgray;
 }
