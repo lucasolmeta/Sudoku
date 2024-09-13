@@ -207,7 +207,6 @@ function resizeScreen (){
 
     if(window.innerWidth/window.innerHeight < 1){
         scalingMultiplier = window.innerWidth/window.innerHeight;
-        console.log(scalingMultiplier);
     }
     
 
