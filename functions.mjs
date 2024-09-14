@@ -211,10 +211,11 @@ function cancelButtonPressed (){
 }
 
 function resizeScreen (){
-    let scalingMultiplier = 1;
+    let scalingMultiplier = 0.91;
+    
 
     if(window.innerWidth/window.innerHeight < 1){
-        scalingMultiplier = window.innerWidth/window.innerHeight;
+        scalingMultiplier*=window.innerWidth/window.innerHeight;
     }
 
     const logoHeight = (window.innerHeight/18)*scalingMultiplier;
