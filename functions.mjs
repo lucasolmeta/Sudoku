@@ -29,34 +29,44 @@ function buildSudoku (){
     initArray(solution);
     initArray(puzzle);
 
-    let ticks = 0;
-
     for(let row = 0; row < 9; row++){
 
+        let numsAvailable = [1,2,3,4,5,6,7,8,9];
         let iterations = 0;
 
         for(let col = 0; col < 9; col++){
+
             let numPlaced = false;
-        
-            while(!numPlaced){
-                var num = Math.floor(Math.random() * 9)+1
+    
+            while(numPlaced == false){
+
+                let i = Math.floor(Math.random() * numsAvailable.length);
+
                 iterations++;
-                ticks++;
-            
-                if (ticks%10000==0){
+
+                if (iterations > 300){
                     for(row = 8; row > 0; row--){
                         for(col = 8; col > 0; col--){
                             solution[row][col]=0;
                         }
                     }
-                } else if (iterations>80){
-                    for(col = 8; col >-1; col--){
+
+                    iterations = 0;
+                    numsAvailable = [1,2,3,4,5,6,7,8,9];
+
+                } else if (iterations%100 == 0){
+                    for (col = 8; col > 0; col--){
                         solution[row][col]=0;
                     }
-                    iterations = 0;
-                } else if(checkValidity(num, row, col)){
-                   solution[row][col]=num;
-                   numPlaced = true;
+
+                    numsAvailable = [1,2,3,4,5,6,7,8,9];
+
+                } else if (checkValidity(numsAvailable[i], row, col)){
+
+                    solution[row][col] = numsAvailable[i];
+
+                    numsAvailable.splice(i,1);
+                    numPlaced = true;
                 }
             }
         }
