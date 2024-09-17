@@ -17,7 +17,7 @@ function initArray (array){
     for (let row = 0; row < 9; row++) {
         array[row]=[];
         for (let col = 0; col < 9; col++) {
-            array[row][col]=0;
+            array[row][col] = 0;
         }
     }
 
@@ -44,7 +44,7 @@ function buildSudoku (){
 
                 iterations++;
 
-                if (iterations > 300){
+                if (iterations > 200){
                     for(row = 8; row > 0; row--){
                         for(col = 8; col > 0; col--){
                             solution[row][col]=0;
@@ -117,7 +117,7 @@ function initPuzzleUI(){
             }
 
             input.style.color = 'black';
-        }
+            input.style.webkitTextFillColor = 'black';        }
     }
 }
 
@@ -202,6 +202,7 @@ function generateRequest(){
     let alert = document.getElementById("alert");
 
     alert.style.display = 'flex';
+
 }
 
 function confirmButtonPressed (){
