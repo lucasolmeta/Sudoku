@@ -158,7 +158,7 @@ function checkSudoku(){
         }
     }
 
-    if(solved && !initGeneration){
+    if(solved){
         alert("Congratulations, you solved the sudoku!");
     }
 }
