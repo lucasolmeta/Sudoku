@@ -44,7 +44,7 @@ function buildSudoku (){
 
                 iterations++;
 
-                if (iterations > 200){
+                if (iterations > 160){
                     for(row = 8; row > 0; row--){
                         for(col = 8; col > 0; col--){
                             solution[row][col]=0;
@@ -54,7 +54,7 @@ function buildSudoku (){
                     iterations = 0;
                     numsAvailable = [1,2,3,4,5,6,7,8,9];
 
-                } else if (iterations%100 == 0){
+                } else if (iterations%80 == 0){
                     for (col = 8; col > 0; col--){
                         solution[row][col]=0;
                     }
