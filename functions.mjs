@@ -84,8 +84,8 @@ function buildSudoku (){
 }
 
 function buildPuzzle(){
-
     for(let i = 0; i < 40; i++){
+
         let numRemoved = false;
 
         while(!numRemoved){
@@ -103,6 +103,7 @@ function buildPuzzle(){
 function initPuzzleUI(){
     for(let r = 0; r < 9; r++){
         for(let c = 0; c < 9; c++){
+
             let thisNum = r*9 + c;
             
             const input = document.getElementById('input' + thisNum);
@@ -222,8 +223,8 @@ function cancelButtonPressed (){
 }
 
 function resizeScreen (){
+
     let scalingMultiplier = 0.91;
-    
 
     if(window.innerWidth/window.innerHeight < 1){
         scalingMultiplier*=window.innerWidth/window.innerHeight;
