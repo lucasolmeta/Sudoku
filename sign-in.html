@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sudoku Space Sign In</title>
+        <link rel="icon" type="image/x-icon" href="favicon.png">
+        <link href="signInStyle.css" rel="stylesheet">
+        <script type="module" src="signInFunctions.mjs"></script>
+    </head>
+
+    <body>
+        <div id = "header">
+            <a href = "index.html">
+                <img id = "favicon" src = "favicon.png">
+            </a>
+            <a href = "index.html">
+                <button id = "playButton">Play Sudoku</button>
+            </a>
+        </div>
+
+        <div id = "signInBox">
+            <div id="signInBoxGreeting">Welcome back!</div><br>
+
+            Username <br>
+            <input class="inputs" id="username" type="text"><br><br>
+
+            Password <br>
+            <input class="inputs" id="password" type="password"><br>
+
+            <div id = "signInButtonBox">
+                <button id="signInButton" uponClick="signInButtonPressed()">Sign In</button>
+            </div>
+
+            <br>
+
+            <a id="signUpButton" href = "sign-up.html">Don't have an account? Sign up here!</a>
+        </div>
+    </body>
+</html>

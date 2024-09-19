@@ -1,5 +1,27 @@
+#header{
+    position: fixed;
+    display: flex;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: rgb(0, 150, 255);
+    margin: 0px;
+}
+
+#favicon{
+    width: auto;
+}
+
+#signInPageButton{
+    font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+    background-color: transparent;
+    border-radius: 10px;
+    border-width: 0px;
+}
+
 #logo{
     display: block;
+    width: auto;
     margin-left: auto;
     margin-right: auto;
 }
@@ -16,7 +38,7 @@
     align-content: space-around;
     flex-wrap: wrap;
 
-    font-family: 'TimesNewRoman';
+    font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
     text-align: center;
     
     border: 2px, solid, black;
@@ -29,7 +51,7 @@
 
 .menuButton{
     -webkit-text-fill-color: black;
-    font-family: 'TimesNewRoman';
+    font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
     text-align: center;
 
     background-color: rgb(230,230,230);
@@ -120,7 +142,7 @@
 
     color: black;
     -webkit-text-fill-color: black;
-    font-family: "fantasy", "copperplate";
+    font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
 
     background-color: rgb(170,170,170);
     border-radius: 3px;

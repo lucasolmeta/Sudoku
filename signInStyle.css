@@ -1,0 +1,60 @@
+#header{
+    position: fixed;
+    display: flex;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: rgb(0, 150, 255);
+    margin: 0px;
+}
+
+#favicon{
+    width: auto;
+}
+
+#playButton{
+    font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+    background-color: transparent;
+    border-radius: 10px;
+    border-width: 0px;
+}
+
+#signInBox{
+    font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(225,225,225);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+
+    border-radius: 3px;
+}
+
+#signInBox * {
+    height: auto;
+}
+
+#signInBoxGreeting{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#signInButtonBox{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#signInButton{
+    font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+}
+
+.inputs{
+    background-color: transparent;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-left-width: 0px;
+    border-bottom: 2px, solid, black;
+}

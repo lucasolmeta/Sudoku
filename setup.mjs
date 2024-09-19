@@ -1,5 +1,5 @@
-import { initArray } from "./functions.mjs";
-import { resizeScreen } from "./functions.mjs";
+import { initArray } from "./sudokuFunctions.mjs";
+import { resizeScreen } from "./sudokuFunctions.mjs";
 
 window.addEventListener('resize', resizeScreen);
 
