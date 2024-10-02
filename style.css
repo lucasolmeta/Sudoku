@@ -14,6 +14,8 @@
 
 #linkedInButton{
     width: auto;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 #logo{
@@ -108,7 +110,7 @@
     text-align: center;
 
     background-color: rgb(225,225,225);
-    border: 1px solid gray;
+    border: 0.5px solid gray;
 
     z-index: 1;
 }

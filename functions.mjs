@@ -253,7 +253,7 @@ function resizeScreen (){
 
     const headerHeight = (window.innerHeight/18)*scalingMultiplier;
     const logoHeight = (window.innerHeight/18)*scalingMultiplier;
-    const numInputSize = (window.innerHeight/12.5+2)*scalingMultiplier;
+    const numInputSize = (window.innerHeight/12.5+1)*scalingMultiplier;
     const fontSize = numInputSize*0.7;
     const innerBoxSize = numInputSize*3+3;
     const outerBoxSize = innerBoxSize*3;
