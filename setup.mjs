@@ -28,7 +28,9 @@ for (let i = 0; i < 9; i++) {
         cell.className = 'cell';
         cell.id = 'cell' + cellNum;
                     
-        numInput.type = 'text';
+        numInput.type = 'number';
+        numInput.min = '1';
+        numInput.max = '9';
         numInput.maxLength = '1';
 
         numInput.className = 'numInput';
