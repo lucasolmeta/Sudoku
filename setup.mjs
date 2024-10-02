@@ -7,6 +7,9 @@ let solution = [];
 let puzzle = [];
 
 const outerBox = document.getElementById('outerBox');
+const logo = document.getElementById('logo');
+
+logo.src = 'logo.png';
 
 window['solution'] = solution;
 window['puzzle'] = puzzle;
