@@ -230,6 +230,7 @@ function resizeScreen (){
         scalingMultiplier*=window.innerWidth/window.innerHeight;
     }
 
+    const headerHeight = (window.innerHeight/18)*scalingMultiplier;
     const logoHeight = (window.innerHeight/18)*scalingMultiplier;
     const numInputSize = (window.innerHeight/12.5+2)*scalingMultiplier;
     const fontSize = numInputSize*0.7;
@@ -240,6 +241,9 @@ function resizeScreen (){
     const alertMenuTop = (window.innerHeight*0.4)*scalingMultiplier;
     const menuButtonsHeight = (sudokuFunctionButtonsHeight*0.65)*scalingMultiplier;
 
+    const header = document.getElementById('header');
+    const favicon = document.getElementById('favicon');
+    const linkedInButton = document.getElementById('linkedInButton');
     const logo = document.getElementById('logo');
     const numInputs = document.querySelectorAll('.numInput');
     const cells = document.querySelectorAll('.cell');
@@ -250,14 +254,24 @@ function resizeScreen (){
     const menuButtons = document.querySelectorAll('.menuButton');
     
     if(window.innerHeight<1050){
+        header.style.height = headerHeight + 'px';
+    } else {
+        header.style.height = '70px';
+    }
+
+    favicon.style.height = headerHeight/2 +'px';
+    favicon.style.margin = headerHeight/4 + 'px';
+    favicon.style.marginRight = window.innerWidth - headerHeight*1.75 + 'px';
+
+    linkedInButton.style.height = headerHeight +'px';
+
+    if(window.innerHeight<1050){
         logo.style.height = logoHeight + 'px';
-        logo.style.width = 'auto';
-        logo.style.marginTop = logoHeight/4 + 'px'
-        logo.style.marginBottom = logo.style.marginTop;
+        logo.style.marginTop = logoHeight*1.25 + 'px';
+        logo.style.marginBottom = logoHeight/4 + 'px'
     } else {
         logo.style.height = '70px';
-        logo.style.width = 'auto';
-        logo.style.marginTop =  '18px'
+        logo.style.marginTop =  '88px'
         logo.style.marginBottom = '18px';
     }
 
@@ -284,11 +298,11 @@ function resizeScreen (){
 
     sudokuFunctionButtons.forEach(sudokuFunctionButton =>{
         sudokuFunctionButton.style.height = sudokuFunctionButtonsHeight + 'px';
-        sudokuFunctionButton.style.width = sudokuFunctionButtonsHeight*2.5 + 'px';
+        sudokuFunctionButton.style.width = sudokuFunctionButtonsHeight*3 + 'px';
         sudokuFunctionButton.style.margin = sudokuFunctionButtonsHeight*0.6 + 'px';
         sudokuFunctionButton.style.marginTop = sudokuFunctionButtonsHeight*0.3 + 'px';
         sudokuFunctionButton.style.fontSize = sudokuFunctionButtonsHeight*0.35 + 'px';
-        sudokuFunctionButton.style.borderWidth = sudokuFunctionButtonsHeight/10 + 'px';
+        sudokuFunctionButton.style.borderWidth = sudokuFunctionButtonsHeight/25 + 'px';
     });
 
     alertMenu.style.height = alertMenuHeight + 'px';
