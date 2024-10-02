@@ -34,7 +34,7 @@ for (let i = 0; i < 9; i++) {
         numInput.addEventListener('input', function(event) {
             const allowedChars = /^[1-9]*$/; 
           
-            if (!allowedChars.test(numInput.value)) {
+            if (numInput.readOnly == false && !allowedChars.test(numInput.value)) {
               this.value = numInput.value.replace(/[^1-9]/g, ''); 
             }
         });
