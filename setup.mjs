@@ -28,10 +28,16 @@ for (let i = 0; i < 9; i++) {
         cell.className = 'cell';
         cell.id = 'cell' + cellNum;
                     
-        numInput.type = 'number';
-        numInput.min = '1';
-        numInput.max = '9';
+        numInput.type = 'text';
         numInput.maxLength = '1';
+
+        numInput.addEventListener('input', function(event) {
+            const allowedChars = /^[1-9]*$/; 
+          
+            if (!allowedChars.test(numInput.value)) {
+              this.value = numInput.value.replace(/[^1-9]/g, ''); 
+            }
+        });
 
         numInput.className = 'numInput';
 

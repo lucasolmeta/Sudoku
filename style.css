@@ -128,11 +128,6 @@
     transform: translate(-1px,-1px);
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-}
-
 #sudokuFunctionButtonDiv{
     display: flex;
     justify-content: center;
