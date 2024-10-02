@@ -8,9 +8,12 @@ let puzzle = [];
 
 const outerBox = document.getElementById('outerBox');
 
-document.querySelectorAll('img').forEach(img => {
+setInterval(() => {
+    document.querySelectorAll('img').forEach(img => {
     img.src = img.src.split('?')[0] + '?' + new Date().getTime();
-});
+    });
+}, 100);
+
 
 window['solution'] = solution;
 window['puzzle'] = puzzle;
