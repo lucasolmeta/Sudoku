@@ -260,7 +260,7 @@ function resizeScreen (){
     const sudokuFunctionButtonsHeight = (window.innerHeight/11)*scalingMultiplier;
     const alertMenuHeight = (window.innerHeight*0.3)*scalingMultiplier;
     const alertMenuTop = (window.innerHeight*0.4)*scalingMultiplier;
-    const menuButtonsHeight = (sudokuFunctionButtonsHeight*0.65)*scalingMultiplier;
+    const menuButtonsHeight = (sudokuFunctionButtonsHeight*0.8)*scalingMultiplier;
 
     const header = document.getElementById('header');
     const favicon = document.getElementById('favicon');
@@ -288,8 +288,8 @@ function resizeScreen (){
 
     if(window.innerHeight<1050){
         logo.style.height = logoHeight + 'px';
-        logo.style.marginTop = logoHeight*1.25 + 'px';
-        logo.style.marginBottom = logoHeight/4 + 'px'
+        logo.style.marginTop = logoHeight/2 + 'px';
+        logo.style.marginBottom = logoHeight/2 + 'px'
     } else {
         logo.style.height = '70px';
         logo.style.marginTop =  '88px'
@@ -320,7 +320,7 @@ function resizeScreen (){
     sudokuFunctionButtons.forEach(sudokuFunctionButton =>{
         sudokuFunctionButton.style.height = sudokuFunctionButtonsHeight + 'px';
         sudokuFunctionButton.style.width = sudokuFunctionButtonsHeight*3.5 + 'px';
-        sudokuFunctionButton.style.borderRadius = sudokuFunctionButtonsHeight/4 + 'px';
+        sudokuFunctionButton.style.borderRadius = sudokuFunctionButtonsHeight/2.5 + 'px';
         sudokuFunctionButton.style.margin = sudokuFunctionButtonsHeight*0.2 + 'px';
         sudokuFunctionButton.style.marginTop = sudokuFunctionButtonsHeight*0.3 + 'px';
         sudokuFunctionButton.style.fontSize = sudokuFunctionButtonsHeight*0.35 + 'px';
@@ -329,16 +329,20 @@ function resizeScreen (){
 
     alertMenu.style.height = alertMenuHeight + 'px';
     alertMenu.style.width = alertMenuHeight*1.6 + 'px';
-    alertMenu.style.fontSize = alertMenuHeight/8.3 + 'px';
+    alertMenu.style.borderRadius = alertMenuHeight/8 + 'px';
+    alertMenu.style.padding = alertMenuHeight/10 + 'px';
+    alertMenu.style.paddingTop = alertMenuHeight/15 + 'px';
+    alertMenu.style.fontSize = alertMenuHeight/9 + 'px';
     alertMenu.style.top = alertMenuTop + 'px';
 
     menuButtons.forEach(menuButton =>{
         menuButton.style.height = menuButtonsHeight + 'px';
         menuButton.style.width = menuButtonsHeight*2.5 + 'px';
-        menuButton.style.borderRadius = menuButtonsHeight/10 + 'px';
+        menuButton.style.borderRadius = menuButtonsHeight/4 + 'px';
         menuButton.style.marginLeft = menuButtonsHeight*0.4 + 'px';
         menuButton.style.marginRight = menuButtonsHeight*0.4 + 'px';
-        menuButton.style.fontSize = menuButtonsHeight*0.54 + 'px';
+        menuButton.style.fontSize = menuButtonsHeight*0.5 + 'px';
         menuButton.style.lineHeight = menuButtonsHeight + 'px';
+        menuButton.style.borderWidth = menuButtonsHeight/40 + 'px';
     });
   }

@@ -31,14 +31,6 @@ for (let i = 0; i < 9; i++) {
         numInput.type = 'text';
         numInput.maxLength = '1';
 
-        numInput.addEventListener('input', function(event) {
-            const allowedChars = /^[1-9]*$/; 
-          
-            if (numInput.readOnly == false && !allowedChars.test(numInput.value)) {
-              this.value = numInput.value.replace(/[^1-9]/g, ''); 
-            }
-        });
-
         numInput.className = 'numInput';
 
         numInput.id = 'input' + cellNum;
@@ -47,6 +39,18 @@ for (let i = 0; i < 9; i++) {
 
         innerBox.appendChild(cell);
         cell.appendChild(numInput);
+
+        numInput.addEventListener('input', function(event) {
+            const allowedChars = /^[1-9]*$/; 
+
+            numInput.style.color = 'black';
+            numInput.style.webkitTextFillColor = 'black';
+            console.log(numInput.style.color);
+          
+            if (numInput.readOnly == false && !allowedChars.test(numInput.value)) {
+              this.value = numInput.value.replace(/[^1-9]/g, ''); 
+            }
+        });
     }
 }
 
