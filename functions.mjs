@@ -236,7 +236,7 @@ function resizeScreen (){
     const logoHeight = (window.innerHeight/18)*scalingMultiplier;
     const numInputSize = (window.innerHeight/12.5+2)*scalingMultiplier;
     const fontSize = numInputSize*0.7;
-    const innerBoxSize = numInputSize*3+6;
+    const innerBoxSize = numInputSize*3+3;
     const outerBoxSize = innerBoxSize*3;
     const sudokuFunctionButtonsHeight = (window.innerHeight/11)*scalingMultiplier;
     const alertMenuHeight = (window.innerHeight*0.3)*scalingMultiplier;
@@ -292,7 +292,7 @@ function resizeScreen (){
     innerBoxes.forEach(innerBox => {
         innerBox.style.height = innerBoxSize + 'px';
         innerBox.style.width = innerBoxSize + 'px';
-        innerBox.style.borderWidth = '3px';
+        innerBox.style.borderWidth = '1.5px';
     });
 
     outerBox.style.height = outerBoxSize + 'px';
