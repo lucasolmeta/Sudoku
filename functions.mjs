@@ -254,7 +254,7 @@ function resizeScreen (){
     const headerHeight = (window.innerHeight/18)*scalingMultiplier;
     const logoHeight = (window.innerHeight/18)*scalingMultiplier;
     const numInputSize = (window.innerHeight/12.5+1)*scalingMultiplier;
-    const fontSize = numInputSize*0.7;
+    const fontSize = numInputSize*0.6;
     const innerBoxSize = numInputSize*3+3;
     const outerBoxSize = innerBoxSize*3;
     const sudokuFunctionButtonsHeight = (window.innerHeight/11)*scalingMultiplier;
@@ -319,11 +319,12 @@ function resizeScreen (){
 
     sudokuFunctionButtons.forEach(sudokuFunctionButton =>{
         sudokuFunctionButton.style.height = sudokuFunctionButtonsHeight + 'px';
-        sudokuFunctionButton.style.width = sudokuFunctionButtonsHeight*3 + 'px';
-        sudokuFunctionButton.style.margin = sudokuFunctionButtonsHeight*0.6 + 'px';
+        sudokuFunctionButton.style.width = sudokuFunctionButtonsHeight*3.5 + 'px';
+        sudokuFunctionButton.style.borderRadius = sudokuFunctionButtonsHeight/4 + 'px';
+        sudokuFunctionButton.style.margin = sudokuFunctionButtonsHeight*0.2 + 'px';
         sudokuFunctionButton.style.marginTop = sudokuFunctionButtonsHeight*0.3 + 'px';
         sudokuFunctionButton.style.fontSize = sudokuFunctionButtonsHeight*0.35 + 'px';
-        sudokuFunctionButton.style.borderWidth = sudokuFunctionButtonsHeight/25 + 'px';
+        sudokuFunctionButton.style.borderWidth = sudokuFunctionButtonsHeight/60 + 'px';
     });
 
     alertMenu.style.height = alertMenuHeight + 'px';
@@ -334,6 +335,7 @@ function resizeScreen (){
     menuButtons.forEach(menuButton =>{
         menuButton.style.height = menuButtonsHeight + 'px';
         menuButton.style.width = menuButtonsHeight*2.5 + 'px';
+        menuButton.style.borderRadius = menuButtonsHeight/10 + 'px';
         menuButton.style.marginLeft = menuButtonsHeight*0.4 + 'px';
         menuButton.style.marginRight = menuButtonsHeight*0.4 + 'px';
         menuButton.style.fontSize = menuButtonsHeight*0.54 + 'px';
