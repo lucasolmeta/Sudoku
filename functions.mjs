@@ -111,11 +111,11 @@ function initPuzzleUI(){
             
             if(puzzle[r][c]==0){
                 input.value="";
-                cell.style.backgroundColor = ('rgb(225,225,225)');
+                cell.style.backgroundColor = ('rgb(255,255,255)');
                 input.readOnly = false;
             } else {
                 input.value = puzzle[r][c];
-                cell.style.backgroundColor = 'rgb(190,190,190)';
+                cell.style.backgroundColor = 'rgb(225,225,225)';
                 input.readOnly = true;
             }
 

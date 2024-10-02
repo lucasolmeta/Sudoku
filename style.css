@@ -26,6 +26,7 @@ body{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    filter: invert(1);
 }
 
 #alert{
@@ -112,7 +113,7 @@ body{
     align-items: center;
     text-align: center;
 
-    background-color: rgb(225,225,225);
+    background-color: white;
     border: 0.5px solid gray;
 
     z-index: 1;
@@ -152,4 +153,8 @@ body{
     border-color: rgb(255,255,255);
     border-style: solid;
     color: rgb(255,255,255);
+}
+
+.sudokuFunctionButtons:hover {
+    background-color: rgba(255,255,255,0.1);
 }
