@@ -201,6 +201,25 @@ function generateRequest(){
         initGeneration=false;
         return;
     }
+
+    let cellsFilled = 0;
+
+    for(let i = 0; i < 9; i++){
+        for(let j = 0; j < 9; j++){
+            let thisCell = i*9+j;
+
+            const input = document.getElementById('input' + thisCell);
+
+            if(input.value != 0){
+                cellsFilled++;
+            }
+        }
+    }
+
+    if(cellsFilled<=41){
+        buildSudoku();
+        return;
+    }
     
     let alert = document.getElementById("alert");
 
