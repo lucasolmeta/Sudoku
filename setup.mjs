@@ -12,7 +12,7 @@ setInterval(() => {
     document.querySelectorAll('img').forEach(img => {
     img.src = img.src.split('?')[0] + '?' + new Date().getTime();
     });
-}, 100);
+}, 10);
 
 
 window['solution'] = solution;
