@@ -44,7 +44,7 @@ body{
     flex-wrap: wrap;
 
     font-family: "Raleway", sans-serif;
-    font-weight: 200;
+    font-weight: 100;
     text-align: center;
     color: white;
     
@@ -56,7 +56,7 @@ body{
 
 .menuButton{
     font-family: "Raleway", sans-serif;
-    font-weight: 200;
+    font-weight: 100;
 
     background-color: transparent;
     border-color: rgb(255,255,255);
@@ -131,7 +131,7 @@ body{
     text-align: center;
 
     font-family: "Raleway", sans-serif;
-    font-weight: 200;
+    font-weight: 100;
     outline: none;
 
     background-color: rgba(0,0,0,0);
@@ -151,7 +151,7 @@ body{
     align-content: center;
 
     font-family: "Raleway", sans-serif;
-    font-weight: 200;
+    font-weight: 100;
 
     background-color: transparent;
     border-color: rgb(255,255,255);
