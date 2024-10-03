@@ -8,12 +8,6 @@ let puzzle = [];
 
 const outerBox = document.getElementById('outerBox');
 
-setInterval(() => {
-    const logo = document.getElementById('logo');
-    logo.src = logo.src.split('?')[0] + '?' + new Date().getTime();
-}, 50);
-
-
 window['solution'] = solution;
 window['puzzle'] = puzzle;
 
