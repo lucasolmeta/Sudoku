@@ -10,7 +10,7 @@ const outerBox = document.getElementById('outerBox');
 
 setInterval(() => {
     const logo = document.getElementById('logo').src;
-    logo.src = img.src.split('?')[0] + '?' + new Date().getTime();
+    logo.src = logo.src.split('?')[0] + '?' + new Date().getTime();
 }, 50);
 
 
