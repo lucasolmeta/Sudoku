@@ -9,7 +9,8 @@ let puzzle = [];
 const outerBox = document.getElementById('outerBox');
 
 setInterval(() => {
-    document.getElementById('logo').src = img.src.split('?')[0] + '?' + new Date().getTime();
+    const logo = document.getElementById('logo').src;
+    logo.src = img.src.split('?')[0] + '?' + new Date().getTime();
 }, 50);
 
 
